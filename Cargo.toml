@@ -1,0 +1,13 @@
+[package]
+name = "gerrymander"
+version = "0.1.0"
+edition = "2021"
+description = "Push-down state automata for games"
+license = "MIT"
+keywords = ["state-machine"]
+categories = ["game-development"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# clean as a whistle
