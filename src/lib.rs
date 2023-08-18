@@ -5,6 +5,7 @@ use std::{fmt::Display, num::NonZeroUsize};
 /// Wrapper for a stack of states.
 ///
 /// The stack will never be empty.
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct StateMachine<T> {
   stack: Vec<T>,
 }
