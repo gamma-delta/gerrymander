@@ -1,6 +1,6 @@
 [package]
 name = "gerrymander"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "Push-down state automata for games"
 license = "MIT"
@@ -14,3 +14,7 @@ serde = { version = "1.0.183", features = ["derive"], optional = true }
 
 [features]
 serde = ["dep:serde"]
+
+[dev-dependencies]
+# this makes serde json always enabled when running tests, but whateverrrrrrrrrr
+serde_json = "1.0.105"

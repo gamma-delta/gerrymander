@@ -6,6 +6,7 @@ use std::{fmt::Display, num::NonZeroUsize};
 ///
 /// The stack will never be empty.
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(Debug, Clone)]
 pub struct StateMachine<T> {
   stack: Vec<T>,
 }
@@ -190,7 +191,7 @@ pub enum TransitionOutcome<T> {
 }
 
 /// Something went wrong when applying a transition.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum TransitionError {
   /// Tried to pop too many things off the stack.
   PoppedTooMany {
