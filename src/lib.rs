@@ -209,7 +209,7 @@ impl Display for TransitionError {
     match self {
       TransitionError::PoppedTooMany { popcnt, available } => write!(
         f,
-        "Tried to pop {} states, but coult only pop {}",
+        "Tried to pop {} states, but could only pop {}",
         popcnt, available
       ),
     }
